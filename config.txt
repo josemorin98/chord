@@ -1,0 +1,33 @@
+[PRE]
+name = preparation
+images = preparation
+context: ./preparation
+dockerfile: ./Dockerfile
+ports: 560
+volumes: /home/jmorin/Chord/Files/:/app/data/
+ip: 148.247.201.222:570
+cmd: python /app/app.py
+
+[LOADBALANCEK]
+name = loadbalance_k
+images = loadbalance_k
+context: ./loadbalance_k
+dockerfile: ./Dockerfile
+ip: 148.247.201.222
+ports: 570
+volumes: /home/jmorin/Chord/Files/:/app/data/
+workers: 13
+type: CHORD
+cmd: python /app/app_k.py
+
+[CHORD]
+port=2300
+name = nodo
+images = nodo_chord
+context: ./chord
+dockerfile: ./Dockerfile
+ip: 148.247.201.222
+base_port: 2300 
+volumes: /home/jmorin/Chord/Files/:/app/data/
+params: True 2300 13
+cmd: python /app/chord.py 10 148.247.201.222

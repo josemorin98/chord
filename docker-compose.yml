@@ -1,0 +1,198 @@
+version: '3'
+services:
+  # preparation:
+  #   image: preparation
+  #   build:
+  #     context: ./preparation
+  #     dockerfile: ./Dockerfile
+  #   ports:
+  #     - 560:5000
+  #   networks:
+  #     - clus_net
+  #   volumes:
+  #     - /home/jmorin/Chord/Files/:/app/data/
+  #   command: python /app/app.py 148.247.201.222:570
+  # loadbalance_k:
+  #   image: loadbalance_k
+  #   build:
+  #     context: ./loadbalance_k
+  #     dockerfile: ./Dockerfile
+  #   ports:
+  #     - 570:5000
+  #   networks:
+  #     - clus_net
+  #   volumes:
+  #     - /home/jmorin/Chord/Files/:/app/data/
+  #   command: python /app/app_k.py 13 148.247.201.222 570
+
+  chord_2300_nodo_work_0:
+    image: nodo_chord
+    build:
+      context: ./chord
+      dockerfile: ./Dockerfile
+    ports:
+      - 2300:5000
+    networks:
+      - clus_net
+    volumes:
+      - /home/jmorin/Chord/Files/:/app/data/
+    command: python /app/chord.py 10 148.247.201.222 2300 True 2300 13
+
+  chord_2301_nodo_work_1:
+    image: nodo_chord
+    build:
+      context: ./chord
+      dockerfile: ./Dockerfile
+    ports:
+      - 2301:5000
+    networks:
+      - clus_net
+    volumes:
+      - /home/jmorin/Chord/Files/:/app/data/
+    command: python /app/chord.py 10 148.247.201.222 2301 True 2300 13
+
+  chord_2302_nodo_work_2:
+    image: nodo_chord
+    build:
+      context: ./chord
+      dockerfile: ./Dockerfile
+    ports:
+      - 2302:5000
+    networks:
+      - clus_net
+    volumes:
+      - /home/jmorin/Chord/Files/:/app/data/
+    command: python /app/chord.py 10 148.247.201.222 2302 True 2300 13
+
+  chord_2303_nodo_work_3:
+    image: nodo_chord
+    build:
+      context: ./chord
+      dockerfile: ./Dockerfile
+    ports:
+      - 2303:5000
+    networks:
+      - clus_net
+    volumes:
+      - /home/jmorin/Chord/Files/:/app/data/
+    command: python /app/chord.py 10 148.247.201.222 2303 True 2300 13
+
+  chord_2304_nodo_work_4:
+    image: nodo_chord
+    build:
+      context: ./chord
+      dockerfile: ./Dockerfile
+    ports:
+      - 2304:5000
+    networks:
+      - clus_net
+    volumes:
+      - /home/jmorin/Chord/Files/:/app/data/
+    command: python /app/chord.py 10 148.247.201.222 2304 True 2300 13
+
+  chord_2305_nodo_work_5:
+    image: nodo_chord
+    build:
+      context: ./chord
+      dockerfile: ./Dockerfile
+    ports:
+      - 2305:5000
+    networks:
+      - clus_net
+    volumes:
+      - /home/jmorin/Chord/Files/:/app/data/
+    command: python /app/chord.py 10 148.247.201.222 2305 True 2300 13
+
+  chord_2306_nodo_work_6:
+    image: nodo_chord
+    build:
+      context: ./chord
+      dockerfile: ./Dockerfile
+    ports:
+      - 2306:5000
+    networks:
+      - clus_net
+    volumes:
+      - /home/jmorin/Chord/Files/:/app/data/
+    command: python /app/chord.py 10 148.247.201.222 2306 True 2300 13
+
+  chord_2307_nodo_work_7:
+    image: nodo_chord
+    build:
+      context: ./chord
+      dockerfile: ./Dockerfile
+    ports:
+      - 2307:5000
+    networks:
+      - clus_net
+    volumes:
+      - /home/jmorin/Chord/Files/:/app/data/
+    command: python /app/chord.py 10 148.247.201.222 2307 True 2300 13
+
+  chord_2308_nodo_work_8:
+    image: nodo_chord
+    build:
+      context: ./chord
+      dockerfile: ./Dockerfile
+    ports:
+      - 2308:5000
+    networks:
+      - clus_net
+    volumes:
+      - /home/jmorin/Chord/Files/:/app/data/
+    command: python /app/chord.py 10 148.247.201.222 2308 True 2300 13
+
+  chord_2309_nodo_work_9:
+    image: nodo_chord
+    build:
+      context: ./chord
+      dockerfile: ./Dockerfile
+    ports:
+      - 2309:5000
+    networks:
+      - clus_net
+    volumes:
+      - /home/jmorin/Chord/Files/:/app/data/
+    command: python /app/chord.py 10 148.247.201.222 2309 True 2300 13
+
+  chord_2310_nodo_work_10:
+    image: nodo_chord
+    build:
+      context: ./chord
+      dockerfile: ./Dockerfile
+    ports:
+      - 2310:5000
+    networks:
+      - clus_net
+    volumes:
+      - /home/jmorin/Chord/Files/:/app/data/
+    command: python /app/chord.py 10 148.247.201.222 2310 True 2300 13
+
+  chord_2311_nodo_work_11:
+    image: nodo_chord
+    build:
+      context: ./chord
+      dockerfile: ./Dockerfile
+    ports:
+      - 2311:5000
+    networks:
+      - clus_net
+    volumes:
+      - /home/jmorin/Chord/Files/:/app/data/
+    command: python /app/chord.py 10 148.247.201.222 2311 True 2300 13
+
+  chord_2312_nodo_work_12:
+    image: nodo_chord
+    build:
+      context: ./chord
+      dockerfile: ./Dockerfile
+    ports:
+      - 2312:5000
+    networks:
+      - clus_net
+    volumes:
+      - /home/jmorin/Chord/Files/:/app/data/
+    command: python /app/chord.py 10 148.247.201.222 2312 True 2300 13
+
+networks:
+  clus_net:
